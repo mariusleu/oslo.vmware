@@ -184,6 +184,12 @@ class FileHandle(object):
         """
         raise NotImplementedError()
 
+    def fileno(self):
+        """returns the integer file descriptor
+        by default this is not supported and raises IOError
+        """
+        raise IOError()
+
     def seek(self, offset):
         """sets the file's current position at the offset
 
